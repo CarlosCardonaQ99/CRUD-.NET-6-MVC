@@ -1,0 +1,12 @@
+﻿@model mvccrud.Models.StarWarsCharacter[]
+
+<h1>Personajes de Star Wars</h1>
+
+<ul>
+    @foreach (var character in Model)
+    {
+        <li>@character.Name</li>
+    }
+</ul>
+    }
+}

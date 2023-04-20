@@ -159,5 +159,17 @@ namespace mvccrud.Controllers
         {
           return (_context.Usuarios?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        //StarWars
+        //public class HomeController : Controller
+        //{
+            public async Task<ActionResult> Characters()
+            {
+                var client = new StarWarsApiClient();
+                var response = await client.GetCharacters();
+
+                return View(response.Results);
+            }
+        }
     }
-}
+//}
